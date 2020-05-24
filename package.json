@@ -1,7 +1,7 @@
 {
   "name": "@akr4/react-sign-in-with-apple-button",
   "description": "Sign in with Apple Button for React",
-  "version": "1.0.0",
+  "version": "1.0.2",
   "devDependencies": {
     "@babel/core": "^7.9.6",
     "@babel/preset-env": "^7.9.6",
@@ -23,7 +23,9 @@
     "typescript": "^3.9.3"
   },
   "main": "./dist/index.js",
-  "files": [],
+  "files": [
+    "dist"
+  ],
   "peerDependencies": {
     "react": "^16.13.1"
   },
@@ -35,9 +37,8 @@
     "clean": "rimraf ./dist",
     "fixpack": "fixpack",
     "format": "prettier --write \"**/*.{js,ts,tsx,json,md}\"",
-    "lint": "run-p lint:*",
-    "lint:style": "stylelint --fix \"src/**/*.css\"",
-    "lint:ts": "eslint --fix \"src/**/*.{ts,tsx}\"",
-    "tsc": "tsc"
+    "lint": "eslint --fix \"src/**/*.{ts,tsx}\"",
+    "tsc": "tsc",
+    "prepublishOnly": "run-s build"
   }
 }
