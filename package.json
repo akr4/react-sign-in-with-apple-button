@@ -23,6 +23,7 @@
     "typescript": "^3.9.3"
   },
   "main": "./dist/index.js",
+  "types": "./dist/index.d.js",
   "files": [
     "dist"
   ],
