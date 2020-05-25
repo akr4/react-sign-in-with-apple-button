@@ -15,16 +15,7 @@ export const SignInWithApple: React.FC<{
   style?: CSSProperties;
 }> = (props) => {
   useEffect(() => {
-    if (
-      Array.from(document.getElementsByTagName('script')).some((e) => {
-        return e.src === APPLEID_AUTH_JS;
-      })
-    ) {
-      return;
-    }
-
-    const script = document.createElement('script');
-    script.onload = () => {
+    const init = () => {
       AppleID.auth.init({
         clientId: props.clientId,
         scope: props.scope?.join(' '),
@@ -33,8 +24,21 @@ export const SignInWithApple: React.FC<{
         usePopup: props.usePopup != null,
       });
     };
-    script.src = APPLEID_AUTH_JS;
-    document.getElementsByTagName('head')[0].appendChild(script);
+
+    if (
+      Array.from(document.getElementsByTagName('script')).some((e) => {
+        return e.src === APPLEID_AUTH_JS;
+      })
+    ) {
+      init();
+    } else {
+      const script = document.createElement('script');
+      script.onload = () => {
+        init();
+      };
+      script.src = APPLEID_AUTH_JS;
+      document.getElementsByTagName('head')[0].appendChild(script);
+    }
   }, []);
 
   return (
