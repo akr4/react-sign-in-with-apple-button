@@ -5,6 +5,7 @@
     "strict": true,
     "module": "CommonJS",
     "moduleResolution": "node",
+    "lib": ["es6", "dom"],
     "jsx": "react",
     "outDir": "./dist",
     "declaration": true,
