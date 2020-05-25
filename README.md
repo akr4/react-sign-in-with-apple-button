@@ -4,7 +4,7 @@ A Sign in with Apple button component using apple's `appleid.auth.js`.
 
 ## Usage
 
-```
+```jsx
 <SignInWithApple
    clientId="<clientId>"
    redirectUri="<redirectUri>"
