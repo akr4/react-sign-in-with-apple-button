@@ -3,11 +3,8 @@ import React, { CSSProperties, useEffect } from 'react';
 export const SignInWithApple: React.FC<{
   clientId: string;
   redirectUri: string;
-  responseType: ('code' | 'id_token')[];
   scope?: ('email' | 'name')[];
-  responseMode?: 'query' | 'fragment' | 'form_post';
   state?: string;
-  nonce?: string;
   usePopup?: boolean;
   type?: 'sign in' | 'continue';
   color?: 'black' | 'white';
