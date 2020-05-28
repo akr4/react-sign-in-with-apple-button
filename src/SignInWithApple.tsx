@@ -48,6 +48,7 @@ export const SignInWithApple: React.FC<{
   type?: 'sign in' | 'continue';
   color?: 'black' | 'white';
   border?: boolean;
+  className?: string;
   style?: CSSProperties;
   locale?: Locale;
 }> = (props) => {
@@ -82,6 +83,7 @@ export const SignInWithApple: React.FC<{
 
   return (
     <div
+      className={props.className}
       id="appleid-signin"
       style={{
         width: 210,
