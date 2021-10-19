@@ -28,7 +28,7 @@
     "dist"
   ],
   "peerDependencies": {
-    "react": "^17.0.2"
+    "react": ">=16.13.1"
   },
   "publishConfig": {
     "registry": "https://npm.pkg.github.com/"
