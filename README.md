@@ -7,3 +7,7 @@ A Sign in with Apple button component using apple's `appleid.auth.js`.
 ```jsx
 <SignInWithApple clientId="<clientId>" redirectUri="<redirectUri>" scope={['name', 'email']} responseType={['code']} />
 ```
+
+## Publish
+
+`npm publish`
